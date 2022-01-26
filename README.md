@@ -3,7 +3,7 @@
 > dct algorithm implement in typescript
 
 
-![luma](./assets/luma.png) ![dct](./assets/dct.png)
+![luma](./assets/luma.jpeg) ![dct](./assets/dct.jpeg)
 
 ## install
 
