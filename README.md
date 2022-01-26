@@ -2,6 +2,9 @@
 
 > dct algorithm implement in typescript
 
+
+![luma](./assets/luma.png) ![dct](./assets/dct.png)
+
 ## install
 
 use pnpm
@@ -133,3 +136,4 @@ you can use dctMatrix, dctMatrixPromise, idctMatrix, idctMatrixPromise to proces
 
   const result2 = await dctMatrixPromise(matrixPromise, m, n)
 ```
+
