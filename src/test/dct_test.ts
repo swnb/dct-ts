@@ -1,4 +1,5 @@
-import { dct, idct } from '..'
+import { Matrix, MatrixPromise } from './../type'
+import { dct, dctMatrix, idct } from '..'
 
 function equal(matrix1: number[][], matrix2: number[][], m: number, n: number) {
   if (matrix1.length !== m || matrix2.length !== m) throw Error()
@@ -38,4 +39,3 @@ function testDct() {
   }
   equal(testArray, resultArray, m, n)
 }
-testDct()
