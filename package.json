@@ -1,0 +1,23 @@
+{
+  "name": "dct",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/swnb/dct.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/swnb/dct/issues"
+  },
+  "homepage": "https://github.com/swnb/dct#readme",
+  "devDependencies": {
+    "@swnb/fabric": "^0.6.19"
+  }
+}

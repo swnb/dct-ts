@@ -1,4 +1,4 @@
-import { dct, idct } from ".."
+import { dct, idct } from '..'
 
 function equal(matrix1: number[][], matrix2: number[][], m: number, n: number) {
   if (matrix1.length !== m || matrix2.length !== m) throw Error()
@@ -9,7 +9,7 @@ function equal(matrix1: number[][], matrix2: number[][], m: number, n: number) {
       if (matrix1[i][j] !== matrix2[i][j]) throw Error()
     }
   }
-  console.log("equal")
+  console.log('equal')
 }
 
 function genArray(m: number, n: number) {

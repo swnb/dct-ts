@@ -1,8 +1,8 @@
-import { Matrix, MatrixPromise } from "./type"
+import type { Matrix, MatrixPromise } from './type'
 
 export function dctMatrix(matrix: Matrix, m: number, n: number) {
-  if (!matrix.getValue) throw Error("matrix must impl method getValue")
-  if (!(m > 0 && n > 0)) throw Error("m and n must large than zero")
+  if (!matrix.getValue) throw Error('matrix must impl method getValue')
+  if (!(m > 0 && n > 0)) throw Error('m and n must large than zero')
 
   const result: number[][] = Array(m)
   for (let i = 0; i < result.length; i++) {
@@ -21,8 +21,8 @@ export function dctMatrix(matrix: Matrix, m: number, n: number) {
             Math.cos((Math.PI * v * (y + 0.5)) / n)
         }
       }
-      let arg1 = Math.sqrt((u === 0 ? 1 : 2) / m)
-      let arg2 = Math.sqrt((v === 0 ? 1 : 2) / n)
+      const arg1 = Math.sqrt((u === 0 ? 1 : 2) / m)
+      const arg2 = Math.sqrt((v === 0 ? 1 : 2) / n)
 
       result[u][v] = arg1 * arg2 * value
     }
@@ -32,8 +32,8 @@ export function dctMatrix(matrix: Matrix, m: number, n: number) {
 }
 
 export function idctMatrix(matrix: Matrix, m: number, n: number) {
-  if (!matrix.getValue) throw Error("matrix must impl method getValue")
-  if (!(m > 0 && n > 0)) throw Error("m and n must large than zero")
+  if (!matrix.getValue) throw Error('matrix must impl method getValue')
+  if (!(m > 0 && n > 0)) throw Error('m and n must large than zero')
 
   const result: number[][] = Array(m)
   for (let i = 0; i < result.length; i++) {
@@ -47,8 +47,8 @@ export function idctMatrix(matrix: Matrix, m: number, n: number) {
         for (let v = 0; v < n; v++) {
           const preValue = matrix.getValue(u, v)
 
-          let arg1 = Math.sqrt((u === 0 ? 1 : 2) / m)
-          let arg2 = Math.sqrt((v === 0 ? 1 : 2) / n)
+          const arg1 = Math.sqrt((u === 0 ? 1 : 2) / m)
+          const arg2 = Math.sqrt((v === 0 ? 1 : 2) / n)
 
           value +=
             arg1 *
@@ -66,13 +66,9 @@ export function idctMatrix(matrix: Matrix, m: number, n: number) {
   return result
 }
 
-export async function dctMatrixPromise(
-  matrix: MatrixPromise,
-  m: number,
-  n: number
-) {
-  if (!matrix.getValue) throw Error("matrix must impl method getValue")
-  if (!(m > 0 && n > 0)) throw Error("m and n must large than zero")
+export async function dctMatrixPromise(matrix: MatrixPromise, m: number, n: number) {
+  if (!matrix.getValue) throw Error('matrix must impl method getValue')
+  if (!(m > 0 && n > 0)) throw Error('m and n must large than zero')
 
   const result: number[][] = Array(m)
   for (let i = 0; i < result.length; i++) {
@@ -91,8 +87,8 @@ export async function dctMatrixPromise(
             Math.cos((Math.PI * v * (y + 0.5)) / n)
         }
       }
-      let arg1 = Math.sqrt((u === 0 ? 1 : 2) / m)
-      let arg2 = Math.sqrt((v === 0 ? 1 : 2) / n)
+      const arg1 = Math.sqrt((u === 0 ? 1 : 2) / m)
+      const arg2 = Math.sqrt((v === 0 ? 1 : 2) / n)
 
       result[u][v] = arg1 * arg2 * value
     }
@@ -101,13 +97,9 @@ export async function dctMatrixPromise(
   return result
 }
 
-export async function idctMatrixPromise(
-  matrix: MatrixPromise,
-  m: number,
-  n: number
-) {
-  if (!matrix.getValue) throw Error("matrix must impl method getValue")
-  if (!(m > 0 && n > 0)) throw Error("m and n must large than zero")
+export async function idctMatrixPromise(matrix: MatrixPromise, m: number, n: number) {
+  if (!matrix.getValue) throw Error('matrix must impl method getValue')
+  if (!(m > 0 && n > 0)) throw Error('m and n must large than zero')
 
   const result: number[][] = Array(m)
   for (let i = 0; i < result.length; i++) {
@@ -121,8 +113,8 @@ export async function idctMatrixPromise(
         for (let v = 0; v < n; v++) {
           const preValue = await matrix.getValue(u, v)
 
-          let arg1 = Math.sqrt((u === 0 ? 1 : 2) / m)
-          let arg2 = Math.sqrt((v === 0 ? 1 : 2) / n)
+          const arg1 = Math.sqrt((u === 0 ? 1 : 2) / m)
+          const arg2 = Math.sqrt((v === 0 ? 1 : 2) / n)
 
           value +=
             arg1 *
