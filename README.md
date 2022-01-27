@@ -2,8 +2,17 @@
 
 > dct algorithm implement in typescript
 
+## for example
 
-![luma](./assets/luma.jpeg) ![dct](./assets/dct.jpeg)
+luma image before dct
+
+![luma](./assets/luma.jpeg)
+
+after dct, you can use idct to recovery origin image
+
+![dct](./assets/dct.jpeg)
+
+
 
 ## install
 
@@ -21,7 +30,7 @@ use npm
 
 ## usage
 
-example
+prepare example data
 
 ```typescript
   const example = [

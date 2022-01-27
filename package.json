@@ -1,22 +1,31 @@
 {
-  "name": "dct",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "@swnb/dct",
+  "version": "0.1.0",
+  "description": "dct algorithm implement in typescript",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --build --clean && tsc --build tsconfig.json",
+    "prepublishOnly": "npm run build && git push --follow-tags"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/swnb/dct.git"
+    "url": "git+https://github.com/swnb/dct-ts.git"
   },
-  "keywords": [],
+  "keywords": [
+    "dct",
+    "idct",
+    "algorithm",
+    "javascript",
+    "typescript"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/swnb/dct/issues"
+    "url": "https://github.com/swnb/dct-ts/issues"
   },
-  "homepage": "https://github.com/swnb/dct#readme",
+  "homepage": "https://github.com/swnb/dct-ts#readme",
   "devDependencies": {
     "@swnb/fabric": "^0.6.19"
   }
