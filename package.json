@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "build": "tsc --build --clean && tsc --build tsconfig.json",
     "prepublishOnly": "npm run build && git push --follow-tags"
   },
@@ -27,6 +27,13 @@
   },
   "homepage": "https://github.com/swnb/dct-ts#readme",
   "devDependencies": {
-    "@swnb/fabric": "^0.6.19"
+    "@babel/core": "^7.16.12",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
+    "@swnb/fabric": "^0.6.19",
+    "@types/jest": "^27.4.0",
+    "babel-jest": "^27.4.6",
+    "jest": "^27.4.7",
+    "ts-node": "^10.4.0"
   }
 }
