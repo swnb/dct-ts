@@ -1,6 +1,6 @@
 # @swnb/dct
 
-> dct algorithm implement in typescript
+> dct and idct algorithm implement in typescript
 
 ## for example
 
